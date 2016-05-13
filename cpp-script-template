@@ -1,0 +1,13 @@
+///bin/true; exec /usr/bin/env clang -x c++ -S -emit-llvm "$0" -o - | lli - "$@" ; exit "$?"
+#include <cstdio>
+
+int main(int argc, char** argv)
+{
+  https://stackoverflow.com/a/30082862 <-- Shebang
+  http://stackoverflow.com/q/75538#comment119366_78840  <-- Links
+  std::printf("This is a test script.\n");
+  for (int i = 0; i < argc; ++i)
+  {
+    std::printf("Paremter number %d is: %s\n", i, argv[i]);
+  }
+}
